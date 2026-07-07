@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>真人数字人说话唱歌demo reel频道</title>
+  <meta name="description" content="数字人说话与唱歌效果展示，覆盖半身、全身、卷发、短发、老人、年轻人、复杂背景和侧身等场景。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Digital Human Speech & Singing Showcase" />
+  <meta property="og:description" content="A project-style showcase for avatar speech and singing demos across diverse people, poses, hairstyles, ages, and backgrounds." />
+  <meta property="og:image" content="static/posters/hero-speech.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%233a49d8'/%3E%3Cstop offset='.55' stop-color='%23008a8a'/%3E%3Cstop offset='1' stop-color='%23d9ae2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='41' font-family='Arial,sans-serif' font-size='24' font-weight='700' fill='white' text-anchor='middle'%3EAV%3C/text%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      var saved;
+      try { saved = localStorage.getItem("avatar-theme"); } catch (e) {}
+      document.documentElement.dataset.theme = saved === "dark" ? "dark" : "light";
+    })();
+  </script>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div class="progress-bar" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top" aria-label="Digital Human Showcase">
+        <span class="logo-mark" aria-hidden="true">AV</span>
+        <span>VocaMotion Avatar声动人像</span>
+      </a>
+      <div class="nav-links">
+        <a href="#overview"><span class="nav-full">总览</span><span class="nav-short">Intro</span></a>
+        <a href="#matrix"><span class="nav-full">场景</span><span class="nav-short">Cases</span></a>
+        <a href="#speech-sing"><span class="nav-full">说话 &amp; 唱歌</span><span class="nav-short">Modes</span></a>
+        <a href="#versions"><span>v1 / v2</span></a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5 1.7 3.1h-3.4L12 2Zm0 20-1.7-3.1h3.4L12 22ZM2 12l3.1-1.7v3.4L2 12Zm20 0-3.1 1.7v-3.4L22 12ZM4.9 4.9l3.4 1-.9 2.4-2.5-3.4Zm14.2 14.2-3.4-1 .9-2.4 2.5 3.4Zm0-14.2-2.5 3.4-.9-2.4 3.4-1ZM4.9 19.1l2.5-3.4.9 2.4-3.4 1Z"/></svg>
+        <svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.4 3.1c.5-.2 1 .2.9.8a7.2 7.2 0 0 0 6.8 8.8c.6 0 .9.7.5 1.1A9.6 9.6 0 1 1 12.4 3.1Z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-wrap">
+      <div class="hero-copy">
+        <p class="hero-kicker reveal">真人数字人</p>
+        <h1 class="reveal" style="--d:60ms">
+          数字人说话与唱歌效果展示
+        </h1>
+        <p class="hero-sub reveal" style="--d:120ms">
+          基于 <b>v1</b> 与 <b>v2</b> 本地视频样本，集中展示数字人在朗读、唱歌、半身、全身、发型、年龄、复杂背景和侧身姿态下的生成能力。
+        </p>
+        <div class="btn-row reveal" style="--d:180ms">
+          <a class="btn btn-primary" href="#matrix">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v7H4V5Zm9 0h7v7h-7V5ZM4 14h7v5H4v-5Zm9 0h7v5h-7v-5Z"/></svg>
+            查看场景矩阵
+          </a>
+          <a class="btn" href="#versions">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v2H6V4Zm-2 5h16v2H4V9Zm2 5h12v2H6v-2Zm-2 5h16v2H4v-2Z"/></svg>
+            v1 / v2 对照
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-showcase reveal" style="--d:240ms" aria-label="Featured avatar videos">
+        <article class="video-card hero-card">
+          <div class="video-frame">
+            <video controls muted autoplay loop playsinline preload="metadata" poster="static/posters/hero-speech.jpg" src="v2/ChatGPT Image 2026年7月6日 14_22_11 (1)__speech__300tangpoems_vol_1_037_64kb_16k_mono_20s.mp4"></video>
+          </div>
+          <div class="card-copy">
+            <div class="tag-row">
+              <span class="tag tag-speech">Speech</span>
+              <span class="tag">Full body</span>
+              <span class="tag">v2</span>
+            </div>
+            <h2>全身朗读</h2>
+            <p>站姿人物在完整身体构图中保持口型、表情和身体稳定性。</p>
+          </div>
+        </article>
+
+        <article class="video-card hero-card hero-card-offset">
+          <div class="video-frame">
+            <video controls muted autoplay loop playsinline preload="metadata" poster="static/posters/hero-sing.jpg" src="v2/ChatGPT Image 2026年7月6日 14_22_11 (2)__sing__2020年1月28日_21_41_31_千里之外_24000hz_mono_20s.mp4"></video>
+          </div>
+          <div class="card-copy">
+            <div class="tag-row">
+              <span class="tag tag-sing">Sing</span>
+              <span class="tag">Full body</span>
+              <span class="tag">v2</span>
+            </div>
+            <h2>全身唱歌</h2>
+            <p>唱歌样本突出长音、节奏和面部驱动下的自然连续性。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="overview">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">总览</p>
+          <h2>从单一人像到多场景数字人表达。</h2>
+          <p class="lede">
+            先看核心说话与唱歌效果，再按人物构图、发型、年龄、背景和姿态覆盖面查看细分样本。
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal" style="--d:0ms">
+            <div class="num">95</div>
+            <div class="label">local clips</div>
+            <p>来自 <code>avatar/v1</code> 与 <code>avatar/v2</code> 的 mp4 样本。</p>
+          </div>
+          <div class="stat reveal" style="--d:80ms">
+            <div class="num">84</div>
+            <div class="label">v2 samples</div>
+            <p>覆盖更多人物形象、发型、场景和动作状态。</p>
+          </div>
+          <div class="stat reveal" style="--d:160ms">
+            <div class="num">8</div>
+            <div class="label">scenario axes</div>
+            <p>半身、全身、卷发、短发、老人、年轻人、复杂背景、侧身。</p>
+          </div>
+          <div class="stat reveal" style="--d:240ms">
+            <div class="num">20s</div>
+            <div class="label">clip window</div>
+            <p>多数样本为 20 秒片段，方便快速比较稳定性。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="matrix">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">场景矩阵</p>
+          <h2>关键场景覆盖。</h2>
+          <p class="lede">
+            这些样本从视频目录中挑选，尽量让每个能力维度都有直接可播放的代表案例。
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" aria-label="Scenario filters">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button class="filter-btn" type="button" data-filter="speech" aria-pressed="false">说话</button>
+          <button class="filter-btn" type="button" data-filter="sing" aria-pressed="false">唱歌</button>
+          <button class="filter-btn" type="button" data-filter="body" aria-pressed="false">构图</button>
+          <button class="filter-btn" type="button" data-filter="hair" aria-pressed="false">发型</button>
+          <button class="filter-btn" type="button" data-filter="age" aria-pressed="false">年龄</button>
+          <button class="filter-btn" type="button" data-filter="background" aria-pressed="false">背景</button>
+          <button class="filter-btn" type="button" data-filter="pose" aria-pressed="false">姿态</button>
+        </div>
+
+        <div class="scenario-grid" id="scenario-grid">
+          <article class="video-card scenario-card reveal" data-tags="speech body half">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/half-body.jpg" src="v2/1__speech__300tangpoems_vol_1_011_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Half body</span></div>
+              <h3>半身近景</h3>
+              <p>近景构图保留面部细节，适合观察口型和轻微表情变化。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech body full">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/full-body.jpg" src="v2/ChatGPT Image 2026年7月6日 14_22_11 (1)__speech__300tangpoems_vol_1_036_T_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Full body</span></div>
+              <h3>全身站姿</h3>
+              <p>完整人物入画，展示身体轮廓、衣物和站姿在朗读时的稳定性。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech hair curly age young">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/curly.jpg" src="v2/ChatGPT Image 2026年7月6日 14_13_12 (2)__speech__300tangpoems_vol_1_042_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Curly hair</span></div>
+              <h3>卷发人物</h3>
+              <p>复杂发丝边缘和面部运动同时出现，检验人像细节保持能力。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech hair short age young">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/short-hair.jpg" src="v2/2__speech__300tangpoems_vol_1_007_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Short hair</span></div>
+              <h3>短发年轻人</h3>
+              <p>短发和清晰五官便于观察唇齿闭合、眨眼和头部轻微变化。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech age elder">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/elder.jpg" src="v2/ChatGPT Image 2026年7月6日 14_13_12 (3)__speech__300tangpoems_vol_1_007_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Elder</span></div>
+              <h3>老人形象</h3>
+              <p>银发、皱纹和柔和表情同时参与生成，体现年龄特征保真度。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="sing age young hair short">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/young-sing.jpg" src="v2/2__sing__2020年2月20日_19_18_09_孤单北半球_24000hz_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-sing">Sing</span><span class="tag">Young</span></div>
+              <h3>年轻人唱歌</h3>
+              <p>唱歌任务覆盖更长口型开合和节奏变化，适合检查连续驱动。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech background">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/complex-bg.jpg" src="v2/1b21cc2d0ed761c7e7957feb93503ee4__speech__300tangpoems_vol_1_037_C_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Complex background</span></div>
+              <h3>复杂背景</h3>
+              <p>餐厅环境包含灯光、桌面和纵深纹理，可观察背景稳定性。</p>
+            </div>
+          </article>
+
+          <article class="video-card scenario-card reveal" data-tags="speech pose body half">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/side-pose.jpg" src="v2/1__speech__300tangpoems_vol_1_040_T_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-speech">Speech</span><span class="tag">Side pose</span></div>
+              <h3>侧身角度</h3>
+              <p>非正面姿态对脸部转角、肩线和头发遮挡提出更高要求。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="speech-sing">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">说话 & 唱歌</p>
+          <h2>同一页面中对照两类驱动。</h2>
+          <p class="lede">
+            说话样本更适合观察清晰发音、停顿和微表情；唱歌样本更适合观察长音、节拍和更夸张的口型变化。
+          </p>
+        </div>
+
+        <div class="duo-grid">
+          <article class="video-card mode-card reveal">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/sing-short.jpg" src="v2/1__sing__2021年10月28日_22_25_00_让我欢喜让我忧_24000hz_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-sing">Sing</span><span class="tag">Short hair</span></div>
+              <h3>短发唱歌</h3>
+              <p>展示音乐驱动下连续口型、眼神和面部节奏变化。</p>
+            </div>
+          </article>
+
+          <article class="video-card mode-card reveal">
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/sing-curly.jpg" src="v2/ChatGPT Image 2026年7月6日 14_13_12 (2)__sing__2019年5月26日_22_30_40_修炼爱情_24000hz_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <div class="tag-row"><span class="tag tag-sing">Sing</span><span class="tag">Curly hair</span></div>
+              <h3>卷发唱歌</h3>
+              <p>在复杂发型下保持人脸身份、头发轮廓和歌唱口型同步。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="versions">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">v1 / v2</p>
+          <h2>版本素材同页浏览。</h2>
+          <p class="lede">
+            保留 v1 与 v2 的目录关系，便于对照同类输入下不同版本的视频表现。
+          </p>
+        </div>
+
+        <div class="version-grid">
+          <article class="video-card version-card reveal">
+            <div class="version-label">v1 · Speech</div>
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/v1-speech.jpg" src="v1/1__speech__300tangpoems_vol_1_024_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <h3>v1 朗读样本</h3>
+              <p>保留早期版本的基础口型驱动效果。</p>
+            </div>
+          </article>
+
+          <article class="video-card version-card reveal">
+            <div class="version-label">v2 · Speech</div>
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/v2-speech.jpg" src="v2/1__speech__300tangpoems_vol_1_024_64kb_16k_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <h3>v2 朗读样本</h3>
+              <p>同类朗读任务下查看新版视频稳定性。</p>
+            </div>
+          </article>
+
+          <article class="video-card version-card reveal">
+            <div class="version-label">v1 · Sing</div>
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/v1-sing.jpg" src="v1/01b415b8225459340d0a83e3f41817f7__sing__2018年12月23日_光阴的故事_24000hz_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <h3>v1 唱歌样本</h3>
+              <p>观察早期版本在唱歌长音中的面部连续性。</p>
+            </div>
+          </article>
+
+          <article class="video-card version-card reveal">
+            <div class="version-label">v2 · Sing</div>
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="static/posters/v2-sing.jpg" src="v2/01b415b8225459340d0a83e3f41817f7__sing__2018年12月23日_光阴的故事_24000hz_mono_20s.mp4"></video>
+            </div>
+            <div class="card-copy">
+              <h3>v2 唱歌样本</h3>
+              <p>同曲目对照新版生成效果，便于横向检查。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
