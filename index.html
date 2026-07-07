@@ -34,6 +34,7 @@
         <a href="#matrix"><span class="nav-full">场景</span><span class="nav-short">Cases</span></a>
         <a href="#speech-sing"><span class="nav-full">说话 &amp; 唱歌</span><span class="nav-short">Modes</span></a>
         <a href="#versions"><span>v1 / v2</span></a>
+        <a href="#all-videos"><span class="nav-full">素材库</span><span class="nav-short">All</span></a>
       </div>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
         <svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5 1.7 3.1h-3.4L12 2Zm0 20-1.7-3.1h3.4L12 22ZM2 12l3.1-1.7v3.4L2 12Zm20 0-3.1 1.7v-3.4L22 12ZM4.9 4.9l3.4 1-.9 2.4-2.5-3.4Zm14.2 14.2-3.4-1 .9-2.4 2.5 3.4Zm0-14.2-2.5 3.4-.9-2.4 3.4-1ZM4.9 19.1l2.5-3.4.9 2.4-3.4 1Z"/></svg>
@@ -61,6 +62,10 @@
           <a class="btn" href="#versions">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v2H6V4Zm-2 5h16v2H4V9Zm2 5h12v2H6v-2Zm-2 5h16v2H4v-2Z"/></svg>
             v1 / v2 对照
+          </a>
+          <a class="btn" href="#all-videos">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v7H4V5Zm9 0h7v7h-7V5ZM4 14h7v5H4v-5Zm9 0h7v5h-7v-5Z"/></svg>
+            全量素材库
           </a>
         </div>
       </div>
@@ -341,6 +346,39 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="all-videos">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">All Videos</p>
+          <h2>全量素材库。</h2>
+          <p class="lede">
+            展示 <code>avatar/v1</code> 与 <code>avatar/v2</code> 下全部 95 个视频，支持按版本、说话、唱歌筛选和按文件名搜索。
+          </p>
+        </div>
+
+        <div class="library-toolbar reveal">
+          <div class="library-tabs" aria-label="All video filters">
+            <button class="library-tab is-active" type="button" data-library-filter="all" aria-pressed="true">全部 <span>95</span></button>
+            <button class="library-tab" type="button" data-library-filter="v1" aria-pressed="false">v1 <span>11</span></button>
+            <button class="library-tab" type="button" data-library-filter="v2" aria-pressed="false">v2 <span>84</span></button>
+            <button class="library-tab" type="button" data-library-filter="speech" aria-pressed="false">说话 <span>47</span></button>
+            <button class="library-tab" type="button" data-library-filter="sing" aria-pressed="false">唱歌 <span>48</span></button>
+          </div>
+          <label class="library-search" for="library-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 4a6.8 6.8 0 0 1 5.4 10.9l3.4 3.4-1.3 1.3-3.4-3.4A6.8 6.8 0 1 1 10.8 4Zm0 1.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8Z"/></svg>
+            <input id="library-search" type="search" placeholder="搜索曲名、朗读编号或文件名" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="library-meta reveal">
+          <span id="library-count">显示 95 / 95</span>
+          <button class="library-reset" id="library-reset" type="button">清空筛选</button>
+        </div>
+
+        <div class="all-video-grid" id="all-video-grid" aria-live="polite"></div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -349,6 +387,7 @@
     </div>
   </footer>
 
+  <script src="static/js/video-data.js"></script>
   <script src="static/js/main.js"></script>
 </body>
 </html>
